@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manish Kansana Portfolio</title>
+    <title>Manish Kansana | Portfolio</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -35,34 +35,34 @@
         </div>
         <div class="about-col-2">
           <h2 class="sub-title"> About Me</h2>
-          <p>Lorem ipsum dolor sit amet, consecteur adipiscing elit. Sed nulla ni bh, tincidunt sit amet
-             sapien quis, elementum molestie tellus. Pellentesque habitant morbi tristique senectus et
-             netus et malesuada fames ac turpis egestas. Mauris eleifend magna id ante convallis
-             mattis. Quisque in sem tristique, dictum sapien et, accumsan libero.
-          </p>
+                <p>Lorem ipsum dolor sit amet, consecteur adipiscing elit. Sed nulla ni bh, tincidunt sit amet
+                  sapien quis, elementum molestie tellus. Pellentesque habitant morbi tristique senectus et
+                  netus et malesuada fames ac turpis egestas. Mauris eleifend magna id ante convallis
+                  mattis. Quisque in sem tristique, dictum sapien et, accumsan libero.
+                </p>
            <div class="tab-titles">
-           <p class="tab-links active-link" onclick="opentab('skills');">Skills</p>
-           <p class="tab-links" onclick="opentab('experience')">Experience</p></p>
-           <p class="tab-links" onclick="opentab('education')">Education</p>
+                <p class="tab-links active-link" onclick="opentab('skills');">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p></p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
            </div>
            <div class= "tab-contents active-tab" id="skills"">
-          <ul>
-             <li><span>UI/UX </span> <br>Designing Web/App interfaces</li>
-             <li><span>Web Development</span><br> Web app Development</li>
-             <li><span>App Development</span><br>Building Android/iOS apps.</li> 
-             </ul> 
+              <ul>
+                <li><span>UI/UX </span> <br>Designing Web/App </li>
+                <li><span>Web Development</span><br> Web app Development</li>
+                <li><span>App Development</span><br>Building Android/iOS apps.</li> 
+              </ul> 
            </div>
            <div class= "tab-contents" id = "experience">
-          <ul>
-             <li><span>2021 - Current </span><br>Designing Web/App interfaces</li>
-             </ul> 
+              <ul>
+                <li><span>2021 - Current </span><br>Designing Web/App interfaces</li>
+              </ul> 
            </div>
           <div class= "tab-contents" id = "education">
-          <ul>
-             <li><span> MISSISSIPPI STATE UNIVERSITY </span><br>Bachlors in Software Engineering</li>
-             <li>Web app Development</li>
-           <li>Building Android/iOS apps.</li> 
-             </ul> 
+              <ul>
+                <li><span> MISSISSIPPI STATE UNIVERSITY </span><br>Bachlors in Software Engineering</li>
+                <li>Web app Development</li>
+                <li>Building Android/ apps.</li> 
+              </ul> 
            </div>
           
         </div>
@@ -74,14 +74,15 @@
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
     
-    function opentab(tabname)
-    {
-      for(tablink of tablinks){
-      tablinks.classList.remove("active-link");
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
         }
-      for(tabcontent of tabcontents){
-      tabcontent.classList.remove("active-tab");
+        for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
         }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
     }
     
     </script>
